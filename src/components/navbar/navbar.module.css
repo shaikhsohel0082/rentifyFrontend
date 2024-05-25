@@ -1,0 +1,35 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.navbar {
+    height: fit-content;
+    padding: 20px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+    background-color: rgb(225, 221, 221);
+    font-size: larger;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(3, 65, 3);
+}
+
+.logo {
+    vertical-align: bottom;
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+}
+p span{
+    cursor: pointer;
+}

@@ -1,0 +1,42 @@
+.contentDiv {
+
+    width: 70vw;
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 27%;
+    top: 15%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+
+.filterDiv {
+    position: absolute;
+    left: 1;
+    top: 27%;
+    height: 400px;
+    width: 300px;
+    /* border: 1px solid black; */
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+h5 {
+    text-align: center;
+    padding: 5px;
+}
+p button{
+    border: none;
+    background: none;
+}
