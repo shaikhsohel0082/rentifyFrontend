@@ -1,12 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+
+const URL = "https://rentifybackend-gq7p.onrender.com";
 export const createUserAsynch = createAsyncThunk(
   "user/createUser",
   async (user) => {
-    const res = await axios.post(
-      "http://localhost:8200/api/users/create",
-      user
-    );
+    const res = await axios.post(`${URL}/api/users/create`, user);
     return res.data;
   }
 );
@@ -15,7 +14,7 @@ export const loginUserAsynch = createAsyncThunk(
   async (user) => {
     try {
       const res = await axios.post(
-        "http://localhost:8200/api/users/login",
+        `${URL}/api/users/login`,
         user
       );
       return res.data;
@@ -28,7 +27,7 @@ export const findUserById = createAsyncThunk(
   "user/findUserById",
   async (id) => {
     console.log(id);
-    const res = await axios.get(`http://localhost:8200/api/users/${id}`);
+    const res = await axios.get(`${URL}/api/users/${id}`);
     console.log(res.data);
     return res.data;
   }
@@ -56,7 +55,7 @@ const userSlice = createSlice({
       state.isFetching = false;
       if (action.payload) {
         state.currentUser = action.payload.user;
-      }else{
+      } else {
         state.currentUser = null;
       }
     });
