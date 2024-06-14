@@ -12,6 +12,7 @@ import { NavLink } from "react-router-dom";
 import { ownerSelector } from "../../redux/userRedux";
 import { deletePostAsync } from "../../redux/postReducer";
 import { toast } from "react-toastify";
+import { startServer } from "../../redux/postReducer";
 export default function Home() {
   const [posts, setPosts] = useState([]);
   const [filter, setFilter] = useState({ room: null, price: null });
@@ -21,7 +22,9 @@ export default function Home() {
   const user = useSelector(currentUser);
   const dispatch = useDispatch();
   const owner = useSelector(ownerSelector);
-
+  useEffect(() => {
+    dispatch(startServer());
+  }, [dispatch]);
   useEffect(() => {
     dispatch(getPosts());
   }, [dispatch, posts]);

@@ -2,6 +2,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const URL = "https://rentifybackend-gq7p.onrender.com";
+export const startServer = createAsyncThunk("posts/startServer", async () => {
+  const res = await axios.get(`https://rentifybackend-gq7p.onrender.com/`);
+  return res.data;
+});
 export const getPosts = createAsyncThunk("posts/getPosts", async () => {
   const res = await axios.get(`${URL}/api/posts/getposts`);
   // console.log(res.data);
